@@ -79,21 +79,8 @@ export default function SafeRouteAILanding() {
       <section className="relative overflow-hidden">
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Top Left - AED Finder Button */}
+            {/* Top Left - Elder Portal Button */}
             <div className="absolute top-4 left-4">
-              <Link href="/aed-finder-complete">
-                <Button
-                  size="lg"
-                  className="bg-slate-700 hover:bg-slate-600 text-white font-semibold shadow-lg border-4 border-white"
-                >
-                  <Zap className="mr-2 h-5 w-5" />
-                  AED Finder™
-                </Button>
-              </Link>
-            </div>
-
-            {/* Top Right - Elder Portal Button */}
-            <div className="absolute top-4 right-4">
               <Link href="/elder-portal">
                 <Button
                   size="lg"
@@ -101,6 +88,19 @@ export default function SafeRouteAILanding() {
                 >
                   <Crown className="w-5 h-5 mr-2" />
                   Elder Council Portal
+                </Button>
+              </Link>
+            </div>
+
+            {/* Top Right - Government Dashboard Button */}
+            <div className="absolute top-4 right-4">
+              <Link href="/government-dashboard">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg border-4 border-white px-8 py-4"
+                >
+                  <Activity className="w-5 h-5 mr-2" />
+                  Government Dashboard
                 </Button>
               </Link>
             </div>
@@ -116,7 +116,7 @@ export default function SafeRouteAILanding() {
               Indigenous-First Design • Satellite Integration • Last-known Auto Beacon Technology
             </p>
 
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center space-y-4">
               <Link href="/hero-mode-landing">
                 <Button
                   size="lg"
@@ -124,6 +124,16 @@ export default function SafeRouteAILanding() {
                 >
                   <Heart className="mr-4 h-8 w-8" />
                   Emergency Hero Mode
+                </Button>
+              </Link>
+
+              <Link href="/aed-finder-complete">
+                <Button
+                  size="lg"
+                  className="bg-slate-700 hover:bg-slate-600 text-white font-semibold shadow-lg border-4 border-white px-8 py-4"
+                >
+                  <Zap className="mr-2 h-5 w-5" />
+                  AED Finder™
                 </Button>
               </Link>
             </div>
