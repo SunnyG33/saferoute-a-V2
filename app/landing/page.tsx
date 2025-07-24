@@ -8,24 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useToast } from "@/hooks/use-toast"
 import HeroModeRedesigned from "@/components/emergency/HeroModeRedesigned"
 import Link from "next/link"
-import {
-  Shield,
-  Satellite,
-  Heart,
-  Users,
-  MapPin,
-  Globe,
-  AlertTriangle,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Wifi,
-  Radio,
-  Navigation,
-  Activity,
-  Crown,
-  Zap,
-} from "lucide-react"
+import { Shield, Satellite, Heart, Users, MapPin, Globe, AlertTriangle, CheckCircle, Star, ArrowRight, Wifi, Radio, Navigation, Activity, Crown, Zap } from 'lucide-react'
 
 export default function SafeRouteAILanding() {
   const [activeDemo, setActiveDemo] = useState("mobile")
@@ -105,6 +88,32 @@ export default function SafeRouteAILanding() {
               </Link>
             </div>
 
+            {/* Bottom Right - Hero Network Button */}
+            <div className="absolute bottom-4 right-4">
+              <Link href="/community-portal">
+                <Button
+                  size="lg"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg border-4 border-white px-8 py-4"
+                >
+                  <Users className="w-5 h-5 mr-2" />
+                  Community Portal
+                </Button>
+              </Link>
+            </div>
+
+            {/* Bottom Left - AED Finder Button */}
+            <div className="absolute bottom-4 left-4">
+              <Link href="/aed-finder-complete">
+                <Button
+                  size="lg"
+                  className="bg-slate-700 hover:bg-slate-600 text-white font-semibold shadow-lg border-4 border-white px-8 py-4"
+                >
+                  <Zap className="mr-2 h-5 w-5" />
+                  AED Finder™
+                </Button>
+              </Link>
+            </div>
+
             <Badge className="mb-6 bg-black text-emerald-300 border-emerald-500/30 text-sm font-semibold border-2">
               🛰️ STARLINK INTEGRATED • L.A.B.™ TECHNOLOGY ENABLED • PATENT PENDING
             </Badge>
@@ -124,16 +133,6 @@ export default function SafeRouteAILanding() {
                 >
                   <Heart className="mr-4 h-8 w-8" />
                   Emergency Hero Mode
-                </Button>
-              </Link>
-
-              <Link href="/aed-finder-complete">
-                <Button
-                  size="lg"
-                  className="bg-slate-700 hover:bg-slate-600 text-white font-semibold shadow-lg border-4 border-white px-8 py-4"
-                >
-                  <Zap className="mr-2 h-5 w-5" />
-                  AED Finder™
                 </Button>
               </Link>
             </div>
@@ -223,7 +222,7 @@ export default function SafeRouteAILanding() {
           </div>
 
           <Tabs value={activeDemo} onValueChange={setActiveDemo} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 bg-white border border-slate-200 shadow-sm">
+            <TabsList className="grid w-full grid-cols-3 bg-white border border-slate-200 shadow-sm">
               <TabsTrigger
                 value="mobile"
                 className="data-[state=active]:bg-red-50 data-[state=active]:text-red-700 data-[state=active]:border-red-200 data-[state=active]:border-4"
@@ -235,12 +234,6 @@ export default function SafeRouteAILanding() {
                 className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700 data-[state=active]:border-blue-200 data-[state=active]:border-4"
               >
                 Gov Dashboard
-              </TabsTrigger>
-              <TabsTrigger
-                value="hero"
-                className="data-[state=active]:bg-emerald-50 data-[state=active]:text-emerald-700 data-[state=active]:border-emerald-200 data-[state=active]:border-4"
-              >
-                Hero Network
               </TabsTrigger>
               <TabsTrigger
                 value="satellite"
@@ -445,28 +438,6 @@ export default function SafeRouteAILanding() {
                     </p>
                     <p className="text-sm text-slate-500 mt-2">
                       High contrast charts, pattern-based data visualization, and text-labeled status indicators
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="hero" className="mt-8">
-              <Card className="bg-white border-slate-200 shadow-lg border-l-8 border-l-emerald-600">
-                <CardHeader>
-                  <CardTitle className="text-slate-900 flex items-center">
-                    <Users className="mr-2 h-6 w-6 text-emerald-600" />
-                    Community Hero Response Network™
-                  </CardTitle>
-                  <CardDescription className="text-slate-600">
-                    Volunteer emergency responders with AI-powered guidance and real-time coordination
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-center py-8">
-                    <p className="text-lg text-slate-600 font-semibold">🦸 Hero Network with Universal Design</p>
-                    <p className="text-sm text-slate-500 mt-2">
-                      Shape-coded status indicators, high contrast interfaces, and text-based communication
                     </p>
                   </div>
                 </CardContent>
